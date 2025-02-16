@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Layout from "../components/Layout";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -21,6 +21,8 @@ const Router = () => {
           <Route element={<ProtectedRoute />}>
             <Route path="/mypage" element={<Mypage />} />
           </Route>
+
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </BrowserRouter>
