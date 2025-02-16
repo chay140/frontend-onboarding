@@ -10,7 +10,13 @@ const Home = () => {
         <li>✅ 프로필 정보 변경</li>
         <li>✅ 안전한 로그아웃</li>
       </ul>
-
+      <button
+        onClick={() => {
+          throw new Error("This is your first error!");
+        }}
+      >
+        Sentry test
+      </button>
     </div>
   );
 };
