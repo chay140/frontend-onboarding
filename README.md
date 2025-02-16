@@ -1,50 +1,17 @@
-# React + TypeScript + Vite
+# **📌 프론트엔드 온보딩 프로젝트** 🚀  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **🛠️ 사용 기술**  
+- **프레임워크**: Vite + React + TypeScript  
+- **상태 관리**: Zustand  
+- **백엔드**: Supabase (인증 & 데이터베이스)  
+- **에러 모니터링**: Sentry  
+- **테스트**: Jest + React Testing Library  
+- **배포**: Vercel  
 
-Currently, two official plugins are available:
+## **📌 주요 기능**  
+✅ 회원가입 & 로그인 (Supabase Auth 활용)  
+✅ Zustand로 전역 상태 관리  
+✅ 프로필 정보 업데이트 (닉네임 변경)  
+✅ 로그아웃 기능  
+✅ Sentry를 통한 에러 추적  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
